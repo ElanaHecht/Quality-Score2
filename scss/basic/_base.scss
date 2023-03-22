@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Assistant-Regular, sans-serif;
+    color: $clr8;
+}
+
+body {
+    margin: 0;
+    background-image: url("/assets/images/leaves_left.png"), url("/assets/images/leaves_right.png"), url("/assets/images/fixed_bg.png");
+    background-position: -100px 155px, 127% 221px, center;
+    background-size: auto, auto, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    @media only screen and (min-width: 600px) {
+        background-image: url("/assets/images/leaves_left@2x.png"), url("/assets/images/leaves_right@2x.png"), url("/assets/images/fixed_bg@3x.png");
+        background-position: -195px -20px, 130% 70px, center;
+     }
+  
+     @media only screen and (min-width: 1068px) {
+        background-image: url("/assets/images/leaves_left@2x.png"), url("/assets/images/leaves_right@2x.png"), url("/assets/images/fixed_desktop_bg.png");
+        background-size: auto, auto, contain;
+        background-position: -195px -20px, 110% 70px, top;
+     }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+button,
+input {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

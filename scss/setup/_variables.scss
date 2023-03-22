@@ -1,0 +1,34 @@
+// COLOR PALETTE
+$clr0: #ffffff;
+$clr1: #9a9b9c;
+$clr2: #e66349;
+$clr3: #7fb457;
+$clr4: #eaaca0;
+$clr5: #45516d;
+$clr6: #9da4bc;
+$clr7: #3a61a0;
+$clr8: #2e2828;
+
+// FONT/TEXT
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-32: 32px;
+$character-spacing-0: 0px;
+$line-spacing-24: 24px;
+$line-spacing-30: 30px;
+$text-transform-uppercase: uppercase;
+
+// LAYOUT PADDING
+$layout-padding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 600px;
+$break-normal: 900px;
+$break-wide: 1200px;
+
+$padded-break-narrow: $break-narrow + $layout-padding * 2;
+$padded-break-normal: $break-normal + $layout-padding * 2;
+$padded-break-wide: $break-wide + $layout-padding * 2;

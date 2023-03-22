@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quality Score</title>
+   <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body>
+
+   <header class="header layout">
+      <div class="title">Choose your package</div>
+
+      <section class="options">
+         <ul class="options_list number__list">
+            <li class="number_item">1</li>
+            <li class="number_item item__active">3</li>
+            <li class="number_item">6</li>
+         </ul>
+
+         <ul class="options_list payment__list">
+            <li class="payment_item item__active">One-Time Purchase</li>
+            <li class="payment_item">Subscribe & Save More</li>
+         </ul>
+      </section>
+   </header>
+
+   <main class="main">
+      <section class="subscribe layout">
+         <label class="label" for="check">
+            <input class="checkbox" name="check" type="checkbox">
+            Yes! I want to Subscribe & Save</label>
+         <p class="subscribe_details">By checking the "Yes" box above, you agree to receive "Dermal Repair Complex" once
+            per month and that your
+            credit card will be charged the amount matching your selected package size, billed to your card as "Beverly
+            Hills MD". You can stop shipments anytime by calling customer service at <span class="highlight">(877)
+               828-5528</span> from
+            6am to 6pm PST. <span class="highlight">(All terms and conditions apply)</span></p>
+      </section>
+
+      <section class="product">
+         <div class="product_best">
+            <h4 class="best_stamp_text">Best Seller</h4>
+            <img class="stamp_img1" src='/assets/images/stamp (2).svg' alt="Best Seller/Value stamp" />
+         </div>
+         <img class="product_img" src='/assets/images/3pack@2x.png' alt="Image of three products" />
+      </section>
+
+      <section class="price">
+         <div class="price_details">
+            <h1 class="price_final"></h1>
+            <h3 class="price_month">/month</h3>
+         </div>
+         <div class="price_details">
+            <h4 class="price_detail">Retail Price</h4>
+            <h4 class="price_detail amount__retail"></h4>
+         </div>
+         <div class="price_details">
+            <h4 class="price_detail">Instant Savings</h4>
+            <h4 class="price_detail amount__savings"></h4>
+         </div>
+         <div class="price_details">
+            <h4 class="price_detail free__shipping">FREE US SHIPPING</h4>
+         </div>
+         <button class="button"><a class="button_link" href="www.tracker.com/link-3" target="_blank">BUY NOW</a></button>
+      </section>
+   </main>
+
+   <footer class="footer layout">
+      <section class="footer_icons">
+         <div class="footer_icon">
+            <img class="icon" src="/assets/images/united-states-of-america.svg" alt="Manufactured in USA" />
+            <h6 class="icon_text">Manufactured in USA</h6>
+         </div>
+         <div class="footer_icon">
+            <img class="icon" src="/assets/images/delivery-truck.svg" alt="Door to door" />
+            <h6 class="icon_text">Door to door</h6>
+         </div>
+      </section>
+
+      <section class="footer_guarantee">
+         <img class="stamp_guarantee" src="/assets/images/90days.svg" alt="90 day money back guarantee">
+         <h4 class="footer_text text__guarantee">Your order is backed by our 90-day money-back guarantee</h4>
+         <h4 class="footer_text text__refund">We are confident you'll love it. So if you're not completely satisfied for
+            any reason,
+            just send it back for a full refund!</h4>
+         <h6 class="footer_text text__shipping">(Not including return shipping)</h6>
+      </section>
+   </footer>
+   <script src="lib/jquery.js"></script>
+   <script type="module" src="js/app.controller.js"></script>
+</body>
+
+</html>

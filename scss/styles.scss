@@ -1,0 +1,13 @@
+// SETUP
+@import "./setup/typography";
+@import "./setup/variables";
+@import "./setup/mixins";
+
+// BASICS
+@import "./basic/base";
+@import "./basic/layout";
+
+// COMPONENTS
+@import "./components/header";
+@import "./components/main";
+@import "./components/footer";

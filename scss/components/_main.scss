@@ -1,0 +1,144 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .subscribe {
+        background-color: rgba($color: $clr0, $alpha: 0.8);
+        width: 100%;
+        padding: 10px 0;
+
+        @media only screen and (min-width: 600px) {
+            background-color: transparent;
+            width: 360px;
+        }
+
+        .label {
+            @include char($type: subscribe);
+            color: $clr8;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.3rem;
+
+            .checkbox {
+                height: 22px;
+                width: 22px;
+                margin-right: 8px;
+                margin-left: 0;
+                border-radius: 4px;
+            }
+        }
+
+        .subscribe_details {
+            font-size: 11px;
+            color: $clr1;
+            line-height: 0.9rem;
+
+            .highlight {
+                color: $clr7;
+            }
+        }
+    }
+
+    .product {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 280px;
+
+        .product_best {
+            position: absolute;
+            left: 3.5rem;
+            top: 2rem;
+
+            @media only screen and (min-width: 600px) {
+                left: 10rem;
+            }
+
+            @media only screen and (min-width: 768px) {
+                left: 14rem;
+            }
+        }
+
+        .best_stamp_text {
+            position: absolute;
+            top: 26%;
+            left: 24%;
+            width: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-family: Assistant-ExtraBold;
+            transform: rotate(-20deg);
+        }
+
+        .stamp_img1 {
+            height: 80px;
+        }
+
+        .product_img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .price_details {
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+                margin-bottom: 1rem;
+            }
+
+            .price_final {
+                @include char($type: price);
+                font-size: 50px;
+            }
+
+            .price_month {
+                @include char($type: price);
+                font-size: 32px;
+                margin-top: 10px;
+            }
+
+            .price_detail {
+                @include char($type: detail);
+                margin-bottom: 0.2rem;
+
+                &.amount__retail {
+                    text-decoration: line-through;
+                    color: $clr2;
+                    margin-left: 5px;
+                }
+
+                &.amount__savings {
+                    color: $clr3;
+                    margin-left: 5px;
+                }
+
+                &.free__shipping {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .button {
+            @include btn;
+
+            &:disabled {
+                @include btn($type: disable);
+                cursor: default;
+            }
+
+            .button_link {
+                text-decoration: none;
+                color: $clr0;
+            }
+        }
+    }
+}

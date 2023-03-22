@@ -1,0 +1,113 @@
+// Buttons
+
+@mixin btn($type: regular, $bg: $clr3, $hover: darken($bg, 8%)) {
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 94px;
+  margin: 30px 0;
+  font-size: $font-size-32;
+  font-family: Assistant-Bold;
+  line-height: $line-spacing-30;
+  letter-spacing: $character-spacing-0;
+  color: $clr0;
+  border-radius: 30px;
+  border: none;
+
+  @if $type == regular {
+    background-color: $bg;
+    &:hover {
+      background-color: $hover;
+    }
+  } @else if $type == disable {
+    background-color: $clr1;
+  }
+}
+
+// CHARACTER STYLES
+
+@mixin char(
+  $type: price,
+  $family: Assistant-Regular,
+  $size: $font-size-22,
+  $lh: $line-spacing-30,
+  $cs: $character-spacing-0,
+  $clr: $clr7
+) {
+  $letter-spacing: $character-spacing-0;
+
+  @if $type == payment {
+    font-family: Assistant-Regular;
+    font-size: $font-size-14;
+    line-height: $line-spacing-24;
+    color: $clr1;
+  } @else if $type == price {
+    font-family: Assistant-Bold;
+    line-height: $lh;
+    color: $clr;
+  } @else if $type == detail {
+    font-family: Assistant-Bold;
+    font-size: $font-size-18;
+    line-height: $line-spacing-24;
+    color: $clr5;
+  } @else if $type == number {
+    font-family: Raleway-Bold;
+    font-size: $font-size-24;
+    color: $clr1;
+  } @else if $type == title {
+    font-family: Assistant-ExtraBold;
+    font-size: $font-size-24;
+    line-height: $line-spacing-24;
+    color: $clr7;
+  } @else if $type == small-print {
+    font-family: Assistant-ExtraLight;
+    font-size: $font-size-14;
+    color: $clr1;
+  } @else if $type == footer1 {
+    font-family: Assistant-ExtraBold;
+    font-size: $font-size-18;
+    line-height: $line-spacing-24;
+    color: $clr3;
+  } @else if $type == subscribe {
+    font-family: $family;
+    font-size: $font-size-18;
+    line-height: $line-spacing-24;
+  } @else if $type == icon-text {
+    font-family: Assistant-ExtraLight;
+    line-height: $lh;
+    color: $clr7;
+  }
+}
+
+/* MEDIA QUERIES BREAKPOINTS */
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $break-wide) {
+    @content;
+  }
+}
+
+@mixin layoutGTC($max) {
+  grid-template-columns:
+    minmax($layout-padding, 1fr)
+    minmax(auto, $max)
+    minmax($layout-padding, 1fr);
+}
